@@ -108,7 +108,7 @@
         <!-- Contact Validator config -->
         <script src="assets/js/validation-script.js"></script>
         <!-- Contact Form JS -->
-        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/ajax-script.js"></script>
         <!-- Map API JS FILES -->
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApghCIIx9MpQhA768sKXxvR_Okg0SF2k4&amp;callback=initMap"></script>
 		<!-- Fox Map JS FILE -->
