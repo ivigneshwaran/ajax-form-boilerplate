@@ -1,41 +1,85 @@
-<?php include'header.php'; ?>
-<style>
-    .error {
-        color: #ff4444 !important;
-        margin-bottom: 0 !important;
-    }
-</style>
+<!doctype html>
+<html lang="en">
+
+<head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap Min CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!-- IcoFont Min CSS -->
+        <link rel="stylesheet" href="assets/css/icofont.min.css">
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="assets/css/responsive.css">
+        <!-- recaptcha -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        <title>Ajax</title>
+		
+		<link rel="icon" type="image/png" href="assets/img/favicon.png">
+    </head>
+    
+	<style>
+		.error {
+			color: #ff4444 !important;
+			margin-bottom: 0 !important;
+		}
+	</style>
+	<style>
+		.success-box {
+			background: #fbfbfb;
+			padding: 35px;
+			box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.1);
+		}
+		.mx-auto {
+			margin-right: auto!important;
+			margin-left: auto!important;
+		}
+		.success-box img {
+			margin: 0 auto;
+			width: 190px;
+			display: block;
+		}
+		.img-fluid {
+			max-width: 100%;
+			height: auto;
+		}
+		.success-box p {
+			font-size: 18px;
+			color: #333;
+			font-weight: 600;
+			text-align: center;
+			margin-top: 20px;
+		}
+		.success-box p i {
+			color: #28a745;
+		}
+		.icofont {
+			font-family: 'IcoFont' !important;
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+		}
+	</style>
+	
+    <body>
 
         <!-- Contact section -->
         <section class="contact-area ptb-100"> 
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 col-lg-5">
-                        <div class="contact-info">
-                            <h3 class="title">Get in Touch</h3>
-                            <ul>
-                                <li><i class="icofont-google-map"></i>  210 Quadra Street Victoria, Canada</li>
-                                <li><i class="icofont-envelope"></i>  <a href="#">example@mail.com</a></li>
-                                <li><i class="icofont-smart-phone"></i>  +44 458 7895</li>
-                            </ul>
-                        </div>
-
-                        <div class="opening-hours">
-                            <h3 class="title">Opening Hours</h3>
-                            <ul>
-                                <li>Mon - Thu <span>7.00 AM - 20.00 PM</span></li>
-                                <li>Friday <span>7.00 AM - 20.00 PM</span></li>
-                                <li>Saturday - Thu <span>7.00 AM - 20.00 PM</span></li>
-                                <li>Sunday <span>7.00 AM - 20.00 PM</span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-12 col-lg-7">
+                    <div class="col-md-12">
                         <h3 class="title">Questions? Let our experts help!</h3>
                         <p>Team of Professionals</p>
 
-                        <form id="contactForm" action="includes/process.php" method="POST">
+                        <form id="contactForm" action="process.php" method="POST">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
@@ -81,6 +125,8 @@
                                 <div class="col-lg-12 col-md-12">
                                     <button type="submit" name="submit" class="default-btn">Send Message</button>
                                     <input type="hidden" name="submit">
+									<img src="assets/img/ajax-loader.gif" id="loader" 
+									style="display:none" alt="loading" width="16" height="16">
                                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -95,5 +141,27 @@
         <!-- Map -->
         <div id="map"></div>
         <!-- End Map -->
+		
+		<!-- Jquery Min JS -->
+        <script src="assets/js/jquery.min.js"></script>
+        <!-- Popper Min JS -->
+        <script src="assets/js/popper.min.js"></script>
+        <!-- Bootstrap Min JS -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        <!-- Jquery UI JS -->
+        <script src="assets/js/jquery.ui.js"></script>
+        <!-- ajaxChimp Min JS -->
+        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+        <!-- Form Validator ajax Script -->
+        <script src="assets/js/form-validator.min.js"></script>
+        <!-- Form Validator JS -->
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <!-- Contact Validator config -->
+        <script src="assets/js/validation-script.js"></script>
+        <!-- Contact Ajax Form JS -->
+        <script src="assets/js/ajax-script.js"></script>
+        <!-- Main JS -->
+        <script src="assets/js/script.js"></script>
+    </body>
 
-<?php include'footer.php'; ?>
+</html>

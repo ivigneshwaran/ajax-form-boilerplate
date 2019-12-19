@@ -55,6 +55,12 @@
   }
 
   function formSuccess() {
+	$("form#contactForm").slideUp("fast", function() {
+      $(this).before(
+        '<div class="col-lg-7 mx-auto success-box success"><img class="img-fluid" src="assets/img/support.png" alt=""><p>Thank you. Your Email was sent successfully. <br> <i class="icofont icofont-checked"></i></p>  </div>'
+      );
+      $("#loader").hide();
+    });
     $("#contactForm")[0].reset();
     submitMSG(true, "Message Submitted!");
   }
