@@ -12,10 +12,6 @@
         <link rel="stylesheet" href="assets/css/icofont.min.css">
         <!-- Style CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
-        <!-- Responsive CSS -->
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        <!-- recaptcha -->
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
         <title>Ajax</title>
 		
@@ -160,6 +156,8 @@
         <script src="assets/js/validation-script.js"></script>
         <!-- Contact Ajax Form JS -->
         <script src="assets/js/ajax-script.js"></script>
+		<!-- recaptcha -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <!-- Main JS -->
         <script src="assets/js/script.js"></script>
     </body>
