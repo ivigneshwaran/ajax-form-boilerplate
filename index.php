@@ -14,14 +14,11 @@
         <link rel="stylesheet" href="assets/css/style.css">
 
         <title>Ajax</title>
-		
-		<link rel="icon" type="image/png" href="assets/img/favicon.png">
     </head>
     
 	<style>
 		.error {
-			color: #ff4444 !important;
-			margin-bottom: 0 !important;
+			color: #f94848 !important;
 		}
 	</style>
 	<style>
@@ -119,9 +116,9 @@
                                 </div>
 
                                 <div class="col-lg-12 col-md-12">
-                                    <button type="submit" name="submit" class="default-btn">Send Message</button>
+                                    <button type="submit" name="submit" id="submitButton" class="default-btn">Send Message</button>
                                     <input type="hidden" name="submit">
-									<img src="assets/img/ajax-loader.gif" id="loader" 
+									<img src="ajax-loader.gif" id="loader" 
 									style="display:none" alt="loading" width="16" height="16">
                                     <div id="msgSubmit" class="h3 text-center hidden"></div>
                                     <div class="clearfix"></div>
@@ -146,12 +143,10 @@
         <script src="assets/js/bootstrap.min.js"></script>
         <!-- Jquery UI JS -->
         <script src="assets/js/jquery.ui.js"></script>
-        <!-- ajaxChimp Min JS -->
-        <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<!-- Form Validator JS -->
+        <script src="assets/js/jquery.validate.min.js"></script>
         <!-- Form Validator ajax Script -->
         <script src="assets/js/form-validator.min.js"></script>
-        <!-- Form Validator JS -->
-        <script src="assets/js/jquery.validate.min.js"></script>
         <!-- Contact Validator config -->
         <script src="assets/js/validation-script.js"></script>
         <!-- Contact Ajax Form JS -->

@@ -1,6 +1,3 @@
-/*==============================================================*/
-// Promedi Contact Form  JS
-/*==============================================================*/
 
 (function($) {
   "use strict"; // Start of use strict
@@ -55,9 +52,14 @@
   }
 
   function formSuccess() {
+	$("form#contact-form input#submitButton").fadeOut("normal", function() {
+      $(this)
+        .parent()
+        .append("");
+    });
 	$("form#contactForm").slideUp("fast", function() {
       $(this).before(
-        '<div class="col-lg-7 mx-auto success-box success"><img class="img-fluid" src="assets/img/support.png" alt=""><p>Thank you. Your Email was sent successfully. <br> <i class="icofont icofont-checked"></i></p>  </div>'
+        '<div class="col-lg-7 mx-auto success-box success"><img class="img-fluid" src="sent.gif" alt="sent"><p>Thank you. Your Email was sent successfully. <br> <i class="icofont icofont-checked"></i></p>  </div>'
       );
       $("#loader").hide();
     });
