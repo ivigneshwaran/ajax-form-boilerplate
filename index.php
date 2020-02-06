@@ -108,7 +108,7 @@
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <div class="g-recaptcha" data-sitekey="6LdSS7kUAAAAANzzuoTVsq-nP5teBODrYAZex5LA" 
+                                        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" 
                                         data-callback="recaptchaCallback" data-expired-callback="recaptchaExpired"></div>
                                         <input id="grecaptcha" name="grecaptcha" type="text" 
                                         style="opacity: 0; position: absolute; top: 0; left: 0; height: 1px; width: 1px;" />
