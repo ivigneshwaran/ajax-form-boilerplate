@@ -2,16 +2,36 @@
 require("vendor/phpmailer/phpmailer/src/PHPMailer.php");
 require("vendor/phpmailer/phpmailer/src/SMTP.php");
 
-$secretKey = "ur_private_key";
-$responseKey = $_POST['g-recaptcha-response'];
-$userIP = $_SERVER['REMOTE_ADDR'];
-$url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
-$response = file_get_contents($url);
-$response = json_decode($response);
+if (empty($_POST['captcha'])) {
+	echo 'Please set recaptcha variable';
+}
 
-if($response -> success) {
+// validate recaptcha
+$response = $_POST['captcha'];
+$post = http_build_query(
+ 	array (
+ 		'response' => $response,
+ 		'secret' => 'YOUR_SECRET_KEY', // your secret key goes here
+ 		'remoteip' => $_SERVER['REMOTE_ADDR']
+ 	)
+);
+$opts = array('http' => 
+	array (
+		'method' => 'POST',
+		'header' => 'application/x-www-form-urlencoded',
+		'content' => $post
+	)
+);
+$context = stream_context_create($opts);
+$serverResponse = @file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, $context);
+if (!$serverResponse) {
+	echo 'Failed to validate Recaptcha';
+}
+$result = json_decode($serverResponse);
 
-    if(isset($_POST['submit'])){
+if($result -> success) {
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $mail = new PHPMailer\PHPMailer\PHPMailer();
         
@@ -23,14 +43,14 @@ if($response -> success) {
         $mail->addAddress("example1@gmail.com");
         $mail->addAddress("example2@gmail.com"); //Recipient name is optional
         
-		//Address to which recipient will reply
+	//Address to which recipient will reply
         $mail->addReplyTo($_POST['email'], "Reply");
         
-		//Send HTML or Plain Text email
+	//Send HTML or Plain Text email
         $mail->isHTML(true);
         $mail->Subject = "Enquiry From example.com";
         
-		$mail->Body = "<html>
+	$mail->Body = "<html>
             <head>
                 <title>HTML email</title>
             </head>
@@ -63,7 +83,7 @@ if($response -> success) {
         }
     }
 
-} else {
+} else if(!$result -> success) {
     echo 'Please Check the recaptcha and Try again';
 }
 
