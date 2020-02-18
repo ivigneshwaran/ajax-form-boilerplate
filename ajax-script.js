@@ -22,17 +22,18 @@
     var subject = $("#subject").val();
     var phone = $("#phone").val();
     var message = $("#message").val();
+    var captcha = grecaptcha.getResponse();
 
     $.ajax({
       type: "POST",
-      url: "includes/process.php",
+      url: "process.php",
       data: {
         name: name,
         email: email,
         subject: subject,
         phone: phone,
         message: message,
-        captcha: grecaptcha.getResponse()
+        captcha: captcha
       },
       success: function(text) {
         if (text == "success") {
@@ -84,5 +85,5 @@
       .addClass(msgClasses)
       .text(msg);
   }
-	
+
 })(jQuery); // End of use strict

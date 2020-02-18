@@ -6,12 +6,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <!-- Bootstrap Min CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <!-- IcoFont Min CSS -->
-        <link rel="stylesheet" href="assets/css/icofont.min.css">
-        <!-- Style CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
         <title>Ajax</title>
     </head>
@@ -69,8 +65,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3 class="title">Questions? Let our experts help!</h3>
-                        <p>Team of Professionals</p>
+                        <h3 class="title">Contact Us</h3>
 
                         <form id="contactForm" action="process.php" method="POST">
                             <div class="row">
@@ -108,7 +103,7 @@
 
                                 <div class="col-lg-12 col-md-12">
                                     <div class="form-group">
-                                        <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" 
+                                        <div class="g-recaptcha" data-sitekey="6Lfu-bIUAAAAAPrvWLe338aFAbQiRyelGOURQ54K" 
                                         data-callback="recaptchaCallback" data-expired-callback="recaptchaExpired"></div>
                                         <input id="grecaptcha" name="grecaptcha" type="text" 
                                         style="opacity: 0; position: absolute; top: 0; left: 0; height: 1px; width: 1px;" />
@@ -131,30 +126,22 @@
         </section>
         <!-- End Contact section -->
 
-        <!-- Map -->
-        <div id="map"></div>
-        <!-- End Map -->
 		
 		<!-- Jquery Min JS -->
-        <script src="assets/js/jquery.min.js"></script>
-        <!-- Popper Min JS -->
-        <script src="assets/js/popper.min.js"></script>
-        <!-- Bootstrap Min JS -->
-        <script src="assets/js/bootstrap.min.js"></script>
-        <!-- Jquery UI JS -->
-        <script src="assets/js/jquery.ui.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<!-- bootstrap -->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 		<!-- Form Validator JS -->
-        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="jquery.validate.min.js"></script>
         <!-- Form Validator ajax Script -->
-        <script src="assets/js/form-validator.min.js"></script>
+        <script src="form-validator.min.js"></script>
         <!-- Contact Validator config -->
-        <script src="assets/js/validation-script.js"></script>
+        <script src="validation-script.js"></script>
         <!-- Contact Ajax Form JS -->
-        <script src="assets/js/ajax-script.js"></script>
+        <script src="ajax-script.js"></script>
 		<!-- recaptcha -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-        <!-- Main JS -->
-        <script src="assets/js/script.js"></script>
     </body>
 
 </html>
