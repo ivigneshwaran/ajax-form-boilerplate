@@ -134,10 +134,6 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 		<!-- Form Validator JS -->
         <script src="jquery.validate.min.js"></script>
-        <!-- Form Validator ajax Script -->
-        <script src="form-validator.min.js"></script>
-        <!-- Contact Validator config -->
-        <script src="validation-script.js"></script>
         <!-- Contact Ajax Form JS -->
         <script src="ajax-script.js"></script>
 		<!-- recaptcha -->
