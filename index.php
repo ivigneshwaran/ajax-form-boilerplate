@@ -67,7 +67,7 @@
                     <div class="col-md-12">
                         <h3 class="title">Contact Us</h3>
 
-                        <form id="contactForm" action="process.php" method="POST">
+                        <form id="contactForm">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form-group">
