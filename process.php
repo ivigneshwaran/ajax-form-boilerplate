@@ -43,14 +43,14 @@ if($result -> success) {
         $mail->addAddress("example1@gmail.com");
         $mail->addAddress("example2@gmail.com"); //Recipient name is optional
         
-	//Address to which recipient will reply
+	    //Address to which recipient will reply
         $mail->addReplyTo($_POST['email'], "Reply");
         
-	//Send HTML or Plain Text email
+	    //Send HTML or Plain Text email
         $mail->isHTML(true);
         $mail->Subject = "Enquiry From example.com";
         
-	$mail->Body = "<html>
+	    $mail->Body = "<html>
             <head>
                 <title>HTML email</title>
             </head>
@@ -87,5 +87,6 @@ if($result -> success) {
     echo 'Please Check the recaptcha and Try again';
 }
 
+// echo 'success';
 
 ?>

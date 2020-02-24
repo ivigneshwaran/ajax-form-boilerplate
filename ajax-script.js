@@ -1,3 +1,4 @@
+
 function recaptchaCallback() {
   var response = grecaptcha.getResponse();
   jQuery("#grecaptcha").val(response);
@@ -8,7 +9,7 @@ function recaptchaExpired() {
 }
 
 (function($) {
-  "use strict"; // Start of use strict
+  "use strict"; // Start of Strict mode
   $("#contactForm").validate({
     // Rules for form validation
     rules: {
@@ -81,6 +82,7 @@ function recaptchaExpired() {
     }
   });
 
+
   function submitForm() {
     // Initiate Variables With Form Content
     var name = $("#name").val();
@@ -103,7 +105,7 @@ function recaptchaExpired() {
       },
       success: function(text) {
         if (text == "success") {
-          formSuccess();
+          formSuccess(name);
         } else {
           formError();
           submitMSG(false, text);
@@ -112,7 +114,7 @@ function recaptchaExpired() {
     });
   }
 
-  function formSuccess() {
+  function formSuccess(name) {
     $("form#contact-form input#submitButton").fadeOut("normal", function() {
       $(this)
         .parent()
@@ -120,7 +122,7 @@ function recaptchaExpired() {
     });
     $("form#contactForm").slideUp("fast", function() {
       $(this).before(
-        '<div class="col-lg-7 mx-auto success-box success"><img class="img-fluid" src="sent.gif" alt="sent"><p>Thank you. Your Email was sent successfully. <br> <i class="icofont icofont-checked"></i></p>  </div>'
+        '<div class="col-lg-7 mx-auto success-box success"><img class="img-fluid" src="sent.gif" alt="sent"><p>Thank you '+name+'. Your Email was sent successfully. <br> <i class="icofont icofont-checked"></i></p>  </div>'
       );
       $("#loader").hide();
     });
@@ -151,4 +153,4 @@ function recaptchaExpired() {
       .addClass(msgClasses)
       .text(msg);
   }
-})(jQuery); // End of use strict
+})(jQuery); // End of strict mode

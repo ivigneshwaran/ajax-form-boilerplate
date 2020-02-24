@@ -111,8 +111,9 @@
                                 </div>
 
                                 <div class="col-lg-12 col-md-12">
-                                    <button type="submit" name="submit" id="submitButton" class="default-btn">Send Message</button>
+                                    <button type="submit" name="submit" id="submitButton" class="btn btn-primary">Send Message</button>
                                     <input type="hidden" name="submit">
+                                    <input type="button" onclick="this.form.reset();" value="Reset" class="btn btn-secondary">
 									<img src="ajax-loader.gif" id="loader" 
 									style="display:none" alt="loading" width="16" height="16">
                                     <div id="msgSubmit" class="h3 text-center hidden"></div>
@@ -138,6 +139,17 @@
         <script src="ajax-script.js"></script>
 		<!-- recaptcha -->
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+        <script>
+            $(document).ready(function() { 
+                $("#resetform").click(function() {
+                    $("#contactForm")[0].reset();
+                }); 
+            });
+        </script>
+
+
     </body>
 
 </html>
